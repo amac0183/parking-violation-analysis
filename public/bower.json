@@ -1,0 +1,22 @@
+{
+  "name": "parking-violation-analysis",
+  "homepage": "https://github.com/amac0183/parking-violation-analysis",
+  "authors": [
+    "Isao Hayakawa <amac0183@gmail.com>"
+  ],
+  "description": "Analyzes the parking violation data from nyc gov site.",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}
