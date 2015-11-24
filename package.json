@@ -1,0 +1,25 @@
+{
+  "name": "parking-violation-analysis",
+  "version": "1.0.0",
+  "description": "Analyzes parking violation data from the New York City government.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amac0183/parking-violation-analysis.git"
+  },
+  "author": "Andrew Hayakawa (amac0183@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amac0183/parking-violation-analysis/issues"
+  },
+  "homepage": "https://github.com/amac0183/parking-violation-analysis#readme",
+  "dependencies": {
+    "express": "~4.13.3"
+  },
+  "engines": [
+    "node >= 0.10.x"
+  ]
+}
