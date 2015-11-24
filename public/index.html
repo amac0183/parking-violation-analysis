@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <title>Parking Violation Analysis</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script type="text/javascript" src="src/js/app.js"></script>
+    <link rel="stylesheet" href="src/css/app.css">
   </head>
   <body>
     <h1>Parking Violation Analysis</h1>
@@ -27,5 +25,42 @@
     		</div>
     	</div>
     </nav>
+    <div id="report" class="container">
+        <div id="monthly" class="row">
+            <div class="col-md-8">
+                <div id="monthly-chart"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="data-table" id="monthly-table"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+    <script type="text/javascript" src="bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script type="text/html" id="counts-table-row-template">
+      <td class="text-left"><%= dateFormatted %></td>
+      <td class="text-right"><%= ticketCount %></td>
+    </script>
+    <script type="text/html" id="counts-table-template">
+      <thead>
+        <tr>
+          <th class="text-left">Date</th>
+          <th class="text-right">Ticket Counts</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </script>
+
+    <script type="text/javascript" src="src/js/views/d3_wrapper.js"></script>
+    <script type="text/javascript" src="src/js/views/table.js"></script>
+    <script type="text/javascript" src="src/js/models/daily_count.js"></script>
+    <script type="text/javascript" src="src/js/controllers/daily_count.js"></script>
+    <script type="text/javascript" src="src/js/app.js"></script>
   </body>
 </html>

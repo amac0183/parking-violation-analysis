@@ -1,0 +1,32 @@
+div#monthly,
+div#monthly-chart {
+	height: 500px;
+}
+
+div.data-table {
+	overflow: scroll;
+	height: 500px;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
