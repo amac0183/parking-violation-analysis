@@ -17,7 +17,7 @@ app.get('/daily', function(req, res) {
             COUNT(summons_id) AS ticket_count\
             FROM summons\
             GROUP BY date\
-			ORDER BY date;', function(err, row) {
+            ORDER BY date;', function(err, row) {
         if(err !== null) {
             res.status(500).send('An error has occured: ' + err);
         }
