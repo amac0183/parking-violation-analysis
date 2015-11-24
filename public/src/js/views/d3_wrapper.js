@@ -8,7 +8,7 @@ var Parking = Parking || {};
 				top: 20,
 				right: 20,
 				bottom: 30,
-				left: 20
+				left: 40
 			},
 			xAttr: 'x',
 			yAttr: 'y'

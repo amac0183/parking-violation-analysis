@@ -1,3 +1,7 @@
+div#report {
+  width: 1100px;
+}
+
 div#monthly,
 div#monthly-chart {
 	height: 500px;
