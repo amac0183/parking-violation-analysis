@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/amac0183/parking-violation-analysis#readme",
   "dependencies": {
-    "express": "~4.13.3"
+    "express": "~4.13.3",
+    "sqlite3": "^3.0.8"
   },
   "engines": [
     "node >= 0.10.x"
