@@ -5,8 +5,10 @@ var Parking = Parking || {};
 (function() {
 	Parking.models = Parking.models || {};
 
-	Parking.models.DailyCount = Backbone.Collection.extend({
-		url: '/daily',
+	Parking.models.ChartTable = Backbone.Collection.extend({
+		initialize: function(options) {
+			this.url = options.url;
+		},
 		parse: function(response) {
 			return response;
 		}

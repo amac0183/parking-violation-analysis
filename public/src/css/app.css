@@ -2,14 +2,18 @@ div#report {
   width: 1100px;
 }
 
-div#monthly,
-div#monthly-chart {
-	height: 500px;
+div.row.spacer {
+  height: 80px;
+}
+
+div.row.data,
+div.data-chart,
+div.data-table {
+  height: 200px;
 }
 
 div.data-table {
-	overflow: scroll;
-	height: 500px;
+  overflow: scroll;
 }
 
 .bar {
