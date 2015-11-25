@@ -1,5 +1,5 @@
 .DS_Store
 npm-debug.log
 node_modules/
-parking_violations.db
+parking_violations_oct.db
 public/bower_components/

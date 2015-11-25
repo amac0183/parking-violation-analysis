@@ -1,38 +1,38 @@
 'use strict';
-var Parking = Parking || {};
 
-(function () {
-    /* 
-     * Backbone Applicaton that runs the Parking Violation Analysis App 
-     */
-    Parking.App = new Marionette.Application();
-    Parking.App.addRegions({
-        dailyCountChartRegion: 'div#daily div.data-chart',
-        dailyCountTableRegion: 'div#daily div.data-table',
-        topMakeChartRegion: 'div#make div.data-chart',
-        topMakeTableRegion: 'div#make div.data-table',
-        topStateChartRegion: 'div#state div.data-chart',
-        topStateTableRegion: 'div#state div.data-table'
-    });
+window.Parking = {
+    controllers: {},
+    models: {},
+    views: {},
 
-    Parking.App.on('start', function() {
-        this.dailyCountCtrl = new Parking.controllers.ChartTable({
+    start: function() {
+        var App = new Marionette.Application();
+        App.addRegions({
+            dailyCountChartRegion: 'div#daily div.data-chart',
+            dailyCountTableRegion: 'div#daily div.data-table',
+            topMakeChartRegion: 'div#make div.data-chart',
+            topMakeTableRegion: 'div#make div.data-table',
+            topStateChartRegion: 'div#state div.data-chart',
+            topStateTableRegion: 'div#state div.data-table'
+        });
+
+        var dailyCountCtrl = new Parking.controllers.ChartTable({
             attr: {
                 x: 'date_formatted',
                 y: 'ticket_count'
             },
-            headings: {
+                headings: {
                 x: 'Date',
                 y: '# of Tickets'
             },
             url: '/daily',
             regions: {
-                chart: this.dailyCountChartRegion,
-                table: this.dailyCountTableRegion
+                chart: App.dailyCountChartRegion,
+                table: App.dailyCountTableRegion
             }
         });
 
-        this.topStateCtrl = new Parking.controllers.ChartTable({
+        var topStateCtrl = new Parking.controllers.ChartTable({
             attr: {
                 x: 'state',
                 y: 'ticket_count'
@@ -43,12 +43,12 @@ var Parking = Parking || {};
             },
             url: '/state_rank_10',
             regions: {
-                chart: this.topStateChartRegion,
-                table: this.topStateTableRegion
+                chart: App.topStateChartRegion,
+                table: App.topStateTableRegion
             }
         });
 
-        this.topMakeCtrl = new Parking.controllers.ChartTable({
+        var topMakeCtrl = new Parking.controllers.ChartTable({
             attr: {
                 x: 'vehicle_make',
                 y: 'ticket_count'
@@ -59,11 +59,9 @@ var Parking = Parking || {};
             },
             url: '/make_rank_10',
             regions: {
-                chart: this.topMakeChartRegion,
-                table: this.topMakeTableRegion
+                chart: App.topMakeChartRegion,
+                table: App.topMakeTableRegion
             }
         });
-    });
-
-    Parking.App.start();
-})();
+    }
+};
