@@ -1,4 +1,16 @@
 'use strict';
+/*
+ * Base d3 chart wrapped in a Marionette ItemView
+ *
+ * @param {object} options
+ * @param {object} options.margin         custom margin values
+ * @param {int}    options.margin.top
+ * @param {int}    options.margin.right
+ * @param {int}    options.margin.bottom
+ * @param {int}    options.margin.left
+ * @param {string} options.xAttr          attribute name stored in the model for the x data
+ * @param {string} options.yAttr          attribute name stored in the model for the y data
+ */
 var ChartBase = Marionette.ItemView.extend({
     defaults: {
         margin: {
@@ -50,7 +62,14 @@ var ChartBase = Marionette.ItemView.extend({
     }
 });
 
-Parking.views.d3 = {};
+Parking.views.d3 = {}; // plan to add other D3 charts
+
+/*
+ * Marionette ItemView based D3 bar chart.
+ *
+ * @param {object} options
+ * @param {float}  options.barPadding  padding between the bars.
+ */
 Parking.views.d3.BarChart = ChartBase.extend({
     defaults: _.defaults({
         barPadding: 0.1

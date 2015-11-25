@@ -5,6 +5,10 @@ window.Parking = {
     models: {},
     views: {},
 
+    /*
+     * Creates the Marionette application, regions, and controllers used in
+     * the application.
+     */
     start: function() {
         var App = new Marionette.Application();
         App.addRegions({
@@ -21,7 +25,7 @@ window.Parking = {
                 x: 'date_formatted',
                 y: 'ticket_count'
             },
-                headings: {
+            headings: {
                 x: 'Date',
                 y: '# of Tickets'
             },
