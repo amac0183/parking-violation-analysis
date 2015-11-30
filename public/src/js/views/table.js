@@ -3,7 +3,7 @@
 /* global Marionette */
 /* global Parking */
 
-/* 
+/*
  * Child view of the Parking.views.Table. This view render each row of a table.
  *
  * @param {object}  options

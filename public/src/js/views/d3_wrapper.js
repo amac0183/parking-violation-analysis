@@ -98,7 +98,6 @@ Parking.views.d3.BarChart = ChartBase.extend({
         var yAxis = d3.svg.axis()
             .scale(this.scales.y)
             .orient('left');
-            //.tickFormat(d3.format('.0%'));
 
         this.svg.append('g')
             .attr('class', 'x axis')
