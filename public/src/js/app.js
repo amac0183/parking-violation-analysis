@@ -1,4 +1,6 @@
 'use strict';
+/* global Marionette */
+/* global Parking */
 
 window.Parking = {
     controllers: {},

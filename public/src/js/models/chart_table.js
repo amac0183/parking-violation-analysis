@@ -1,4 +1,7 @@
 'use strict';
+/* global Backbone */
+/* global Parking */
+
 /*
  * Model that fetches data based on a relative url provided in the options
  *

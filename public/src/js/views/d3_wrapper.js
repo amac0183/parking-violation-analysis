@@ -1,4 +1,9 @@
 'use strict';
+/* global _ */
+/* global d3 */
+/* global Marionette */
+/* global Parking */
+
 /*
  * Base d3 chart wrapped in a Marionette ItemView
  *
@@ -56,7 +61,7 @@ var ChartBase = Marionette.ItemView.extend({
                 x: datapoint[self.options.xAttr],
                 y: datapoint[self.options.yAttr]
             });
-        })
+        });
 
         return data;
     }

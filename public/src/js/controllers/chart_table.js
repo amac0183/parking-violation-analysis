@@ -1,4 +1,7 @@
 'use strict';
+/* global Marionette */
+/* global Parking */
+
 /*
  * Controller for the chart and table component. The controller
  * creates the model and views, then adds a listener on the model
