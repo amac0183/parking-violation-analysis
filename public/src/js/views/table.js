@@ -17,7 +17,7 @@ var TableRowView = Marionette.ItemView.extend({
         this.$el
             .append($('<td>' + this.model.get(this.options.attr.x) + '</td>')
                 .attr('class', 'text-left'))
-            .append($('<td>' + this.model.get(this.options.attr.y) + '</td>')
+            .append($('<td>' + this.model.get(this.options.attr.y).toLocaleString() + '</td>')
                 .attr('class', 'text-right'));
 
         return this;

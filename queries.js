@@ -8,6 +8,7 @@ exports.sql = {
     stateRank10: 'SELECT state,\
         COUNT(summons_id) AS ticket_count\
         FROM summons\
+        WHERE state != "NY"\
         GROUP BY state\
         ORDER BY ticket_count DESC\
         LIMIT 10;',

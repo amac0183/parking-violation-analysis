@@ -12,6 +12,10 @@ div.data-table {
   height: 200px;
 }
 
+div.row.data {
+  width: 1050px;
+}
+
 div.data-table {
   overflow: scroll;
 }

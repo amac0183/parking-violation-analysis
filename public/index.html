@@ -26,35 +26,59 @@
     	</div>
     </nav>
     <div id="report" class="container">
-        <div id="daily" class="row data">
-          <h3>Ticket Counts per Day</h3>
-          <div class="col-md-8">
-            <div class="data-chart" id="daily-chart"></div>
-          </div>
-          <div class="col-md-4">
-            <div class="data-table" id="daily-table"></div>
-          </div>
-        </div>
-        <div class="row spacer"></div>
-        <div id="state" class="row data">
-          <h3>Top 10 Violators by State</h3>
-          <div class="col-md-8">
-            <div class="data-chart" id="state-chart"></div>
-          </div>
-          <div class="col-md-4">
-            <div class="data-table" id="state-table"></div>
-          </div>
-        </div>
-        <div class="row spacer"></div>
-        <div id="make" class="row data">
-          <h3>Top 10 Violators by Make</h3>
-          <div class="col-md-8">
-            <div class="data-chart"></div>
-          </div>
-          <div class="col-md-4">
-            <div class="data-table"</div>
+      <div id="daily" class="row">
+        <div class="col-md-12">
+          <div class="container">
+            <h3>Ticket Counts per Day</h3>
+            <div class="row data">
+              <div class="col-md-8">
+                <div class="data-chart" id="daily-chart"></div>
+              </div>
+              <div class="col-md-3">
+                <div class="data-table" id="daily-table"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10">
+                <p><strong>Analysis:</strong> The ticket counts for Sundays are lower than other days because metered parking is not enforced.</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="row spacer"></div>
+      <div id="state" class="row">
+        <div class="col-md-12">
+          <div class="container">
+            <h3>Top 10 Violators by State <small>Excluding NY State</small></h3>
+            <div class="row data">
+              <div class="col-md-8">
+                <div class="data-chart" id="state-chart"></div>
+              </div>
+              <div class="col-md-3">
+                <div class="data-table" id="state-table"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row spacer"></div>
+      <div id="make" class="row">
+        <div class="col-md-12">
+          <div class="container">
+            <h3>Top 10 Violators by Make</h3>
+            <div class="row data">
+              <div class="col-md-8">
+                <div class="data-chart" id="data-chart"></div>
+              </div>
+              <div class="col-md-3">
+                <div class="data-table" id="data-table"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row spacer"></div>
     </div>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
